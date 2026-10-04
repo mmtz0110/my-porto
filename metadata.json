@@ -1,6 +1,6 @@
 {
-  "name": "Agnaya Mumtazul - Portofolio 3D Interaktif",
-  "description": "Portofolio pribadi modern dan interaktif Agnaya Mumtazul dengan kartu ID 3D fisik responsif, linimasa pendidikan & foto, radar keahlian & topik yang baru dipelajari, pengalaman kerja, serta formulir kontak responsif.",
+  "name": "Agnaya Mumtazul - Portofolio",
+  "description": "Portofolio pribadi Agnaya Mumtazul dengan linimasa pendidikan & foto, radar keahlian & topik yang baru dipelajari, pengalaman kerja, serta formulir kontak.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

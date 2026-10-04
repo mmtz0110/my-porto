@@ -59,13 +59,19 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
           </button>
 
           {/* Hero Image */}
-          <div className="relative aspect-video max-h-72 w-full bg-zinc-950 overflow-hidden">
-            <img
-              src={project.imageUrl}
-              alt={project.title}
-              className="w-full h-full object-cover"
-              referrerPolicy="no-referrer"
-            />
+          <div className="relative aspect-video max-h-72 w-full bg-[#111310] overflow-hidden">
+            {project.imageUrl ? (
+              <img
+                src={project.imageUrl}
+                alt=""
+                className="w-full h-full object-cover"
+                referrerPolicy="no-referrer"
+              />
+            ) : (
+              <div className="flex h-full items-center justify-center px-6 text-center text-3xl font-semibold tracking-tight text-white/35 sm:text-5xl" aria-hidden="true">
+                {project.title}
+              </div>
+            )}
             <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/40 to-transparent" />
             
             <div className="absolute bottom-4 left-6 right-6">
@@ -145,40 +151,37 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
             </div>
 
             {/* Quantifiable Results & Metrics */}
-            <div className="space-y-2.5">
-              <h3 className="text-xs font-mono uppercase tracking-widest text-zinc-400 font-bold flex items-center gap-1.5">
-                <TrendingUp className="w-4 h-4" />
-                <span>{lang === "id" ? "Hasil & Dampak Terukur" : "Impact & Measurable Metrics"}</span>
-              </h3>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
-                {project.metrics[lang].map((metric, i) => (
-                  <div
-                    key={i}
-                    className="p-3 rounded-xl bg-zinc-950 border border-zinc-800 text-xs font-semibold text-zinc-200 flex items-center gap-2"
-                  >
-                    <div className="w-2 h-2 rounded-full bg-emerald-400" />
-                    <span>{metric}</span>
-                  </div>
-                ))}
+            {project.metrics[lang].length > 0 && (
+              <div className="space-y-2.5">
+                <h3 className="text-xs font-mono uppercase tracking-widest text-zinc-400 font-bold flex items-center gap-1.5">
+                  <TrendingUp className="w-4 h-4" />
+                  <span>{lang === "id" ? "Hasil & Dampak" : "Results & Impact"}</span>
+                </h3>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+                  {project.metrics[lang].map((metric) => (
+                    <div key={metric} className="p-3 bg-zinc-950 border border-zinc-800 text-xs text-zinc-200">
+                      {metric}
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
+            )}
 
             {/* Tech Stack Pills */}
-            <div className="pt-2 border-t border-zinc-800 space-y-2">
-              <h3 className="text-xs font-mono uppercase tracking-widest text-zinc-400 font-bold">
-                {lang === "id" ? "Teknologi yang Digunakan" : "Technologies Used"}
-              </h3>
-              <div className="flex flex-wrap gap-2">
-                {project.technologies.map((tech) => (
-                  <span
-                    key={tech}
-                    className="px-3 py-1 rounded-full bg-zinc-950 border border-zinc-800 text-zinc-300 text-xs font-mono"
-                  >
-                    {tech}
-                  </span>
-                ))}
+            {project.technologies.length > 0 && (
+              <div className="pt-2 border-t border-zinc-800 space-y-2">
+                <h3 className="text-xs font-mono uppercase tracking-widest text-zinc-400 font-bold">
+                  {lang === "id" ? "Teknologi dan konsep" : "Tools and concepts"}
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {project.technologies.map((tech) => (
+                    <span key={tech} className="px-3 py-1 bg-zinc-950 border border-zinc-800 text-zinc-300 text-xs font-mono">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
               </div>
-            </div>
+            )}
           </div>
         </motion.div>
       </div>

@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Space Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -8,11 +13,26 @@
   
   body {
     background-color: #09090b;
-    color: #d4d4d8;
-    @apply antialiased selection:bg-zinc-700 selection:text-white;
+    color: #f4f4f5;
+    @apply antialiased selection:bg-[#D63229] selection:text-white;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   }
 }
+
+/* Dark portfolio palette overrides for existing component utility classes. */
+#portfolio-app-root [class*="text-[#111310]"] { color: #f4f4f5; }
+#portfolio-app-root [class*="bg-white"],
+#portfolio-app-root [class*="bg-[#F6F6F4]"],
+#portfolio-app-root [class*="bg-gray-50"],
+#portfolio-app-root [class*="bg-gray-100"],
+#portfolio-app-root [class*="bg-gray-200"],
+#portfolio-app-root [class*="bg-[#E8E8E3]"] { background-color: #18181b; }
+#portfolio-app-root [class*="border-[#111310]"] { border-color: #3f3f46; }
+#portfolio-app-root [class*="border-[#111310]/"] { border-color: rgb(161 161 170 / 0.35); }
+#portfolio-app-root [class*="text-[#111310]/"] { color: rgb(228 228 231 / 0.78); }
+#portfolio-app-root input { color: #f4f4f5; }
+#portfolio-app-root input::placeholder { color: #a1a1aa; }
+#portfolio-app-root [class*="shadow-["] { --tw-shadow-color: rgb(255 255 255 / 0.14); }
 
 /* 3D Perspective & Card Styles */
 .perspective-1000 {
@@ -74,14 +94,24 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #09090b;
+  background: #F6F6F4;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #27272a;
-  border-radius: 4px;
+  background: #C4C4C4;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #3f3f46;
+  background: #A0A0A0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

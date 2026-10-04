@@ -72,13 +72,13 @@ export interface ProjectItem {
   id: string;
   title: string;
   tagline: { id: string; en: string };
-  category: "Full-Stack" | "AI & ML" | "Web & 3D" | "Mobile & API";
+  category: "Full-Stack" | "AI & ML" | "Web & 3D" | "Mobile & API" | "IoT & Embedded";
   imageUrl: string;
   demoUrl?: string;
   githubUrl?: string;
   technologies: string[];
   featured: boolean;
-  date: string;
+  date?: string;
   overview: { id: string; en: string };
   challenges: { id: string; en: string };
   solutions: { id: string; en: string };

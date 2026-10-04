@@ -1,0 +1,19 @@
+<!-- HTML: Menyediakan elemen tombol -->
+<button id="btn">Klik Saya</button>
+
+<style>
+  /* CSS: Mengatur warna & gaya */
+  #btn {
+    background: #007bff;
+    color: white;
+    border-radius: 5px;
+    padding: 8px 16px;
+  }
+</style>
+
+<script>
+  // JavaScript: Mengubah teks saat tombol diklik
+  document.getElementById("btn").onclick = function() {
+    this.innerText = "Berhasil!";
+  };
+</script>

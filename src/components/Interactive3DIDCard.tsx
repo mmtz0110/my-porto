@@ -1332,8 +1332,8 @@ export const Interactive3DIDCard: React.FC<Interactive3DIDCardProps> = ({
     backLight.position.set(0, 6, -16);
     scene.add(backLight);
 
-    // Rim / Edge Accent
-    const rim = new THREE.DirectionalLight(0x60a5fa, 0.5);
+    // Rim / Edge Accent (Harsh Desk Lamp effect)
+    const rim = new THREE.DirectionalLight(0xffeedd, 0.8);
     rim.position.set(0, 14, 0);
     scene.add(rim);
   }, []);

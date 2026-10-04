@@ -8,29 +8,26 @@ import {
   IDCardCustomConfig,
 } from "../types";
 
-// Import file desain ID card lokal
-import idcardDepanImg from "./idcardDepan.png";
-import idcardBelakangImg from "./idcardBelakang.png";
 
 export const PERSONAL_INFO = {
-  name: "Agnaya Mumtazul",
-  title: "Tech Enthusiast - Software & Website Developer",
+  name: "Agnaya Mumtazul Wafir",
+  title: "Mahasiswa Teknik Informatika · Developer · Problem Solver · Tech Enthusiast",
   tagline: {
-    id: "Perkembangan teknologi memaksa manusia untuk terus beradaptasi, dan saya adalah yang beradaptasi itu.",
-    en: "Technological developments force humans to continue to adapt, and I am the one who adapts.",
+    id: "Saya suka membangun sesuatu, mencari tahu kenapa ia bekerja atau gagal, lalu memperbaikinya.",
+    en: "I like building things, finding out why they work or fail, and improving them.",
   },
   email: "mumtazulagnaya@gmail.com",
   phone: "+62 851-8338-0962",
-  location: "Kab. Sukabumi, Jawa Barat, Indonesia",
+  location: "Indonesia",
   bio: {
-    id: "Saya adalah seorang Software Engineer yang berfokus pada ekosistem JavaScript/TypeScript modern, arsitektur cloud, dan integrasi Artificial Intelligence.",
-    en: "I am a Software Engineer focused on modern JavaScript/TypeScript ecosystems, cloud architectures, and Artificial Intelligence integrations.",
+    id: "Minat saya ada di persimpangan software, sistem, hardware, dan kreativitas.",
+    en: "My interests sit at the intersection of software, systems, hardware, and creativity.",
   },
-  status: "Tersedia untuk Proyek & Peluang Kerja",
-  statusEn: "Available for Projects & Opportunities",
-  yearsExperience: "2+ Tahun",
-  projectsCompleted: "-",
-  satisfiedClients: "-",
+  status: "Terbuka untuk berdiskusi dan berkolaborasi",
+  statusEn: "Open to conversations and collaboration",
+  yearsExperience: "",
+  projectsCompleted: "",
+  satisfiedClients: "",
   socials: {
     github: "https://github.com/mmtz0110",
     linkedin: "-",
@@ -39,342 +36,299 @@ export const PERSONAL_INFO = {
   },
 };
 
-/* =========================================================================================
-   📍 BAGIAN UNTUK MENGUBAH FOTO / GAMBAR / DESAIN 3D ID CARD
-   Ganti URL di bawah ini dengan link gambar Anda (Unsplash, Imgur, Cloudinary, atau /assets)
-   ========================================================================================= */
 export const DEFAULT_ID_CARD_CONFIG: IDCardCustomConfig = {
-  name: "AGNAYA MUMTAZUL",
-  role: "SOFTWARE ENGINEER",
-  department: "INFORMATICS ENGINEER",
+  name: "AGNAYA MUMTAZUL WAFIR",
+  role: "STUDENT · DEVELOPER",
+  department: "INFORMATICS ENGINEERING",
   companyName: "UNIVERSITAS NUSA PUTRA",
   idNumber: "20240040086",
   issuedDate: "09/2024",
   expiryDate: "08/2028",
-
-  // 🎨 Pilihan Warna Tema Kartu
-  accentColor: "#3b82f6", // Warna aksen biru modern (atau #FF4D00, #10b981, #8b5cf6, dll)
-  secondaryColor: "#09090b", // Background gelap premium
-  textColor: "#ffffff",
-
-  // 📷 1. GANTI FOTO AVATAR / PAS FOTO KARTU DI SINI:
+  accentColor: "#D63229",
+  secondaryColor: "#F6F6F4",
+  textColor: "#111310",
   avatarUrl: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=600&auto=format&fit=crop",
-
-  // 🏢 2. GANTI LOGO KAMPUS / PERUSAHAAN DI SINI (Opsional, PNG transparan direkomendasikan):
   logoUrl: "https://id.wikipedia.org/wiki/Berkas:Logo_Universitas_Nusa_Putra.png",
-
-  // 🖼️ 3. GANTI KESELURUHAN DESAIN MUKA DEPAN KARTU DENGAN GAMBAR SENDIRI (Opsional, rasio CR80 ~54x85.6mm):
-  frontDesignUrl: idcardDepanImg,
-
-  // 🖼️ 4. GANTI KESELURUHAN DESAIN MUKA BELAKANG KARTU DENGAN GAMBAR SENDIRI (Opsional):
-  backDesignUrl: idcardBelakangImg,
-
-  // 🎗️ 5. TEKS & WARNA PADA TALI LANYARD:
-  lanyardText: "AGNAYA MUMTAZUL • UNIVERSITAS NUSA PUTRA • SOFTWARE ENGINEER • ",
-  lanyardColor: "#09090b",
-  lanyardSecondaryColor: "#3b82f6",
-
-  // Fitur Keamanan Visual
+  frontDesignUrl: "/idcardDepan.png",
+  backDesignUrl: "/idcardBelakang.png",
+  lanyardText: "AGNAYA MUMTAZUL WAFIR • UNIVERSITAS NUSA PUTRA • DEVELOPER • ",
+  lanyardColor: "#111310",
+  lanyardSecondaryColor: "#F6F6F4",
   showHologram: false,
   showChip: false,
   showBarcode: false,
   showQrCode: false,
-  emergencyContact: "TEL: +62 851-8338-0962 • mumtazulagnaya@gmail.com",
+  emergencyContact: "mumtazulagnaya@gmail.com",
 };
 
 export const EDUCATION_DATA: EducationItem[] = [
   {
-    id: "edu-1",
-    degree: {
-      id: "S1 - Teknik Informatika",
-      en: "S1 - Informatics Engineering",
-    },
+    id: "informatics-nusa-putra",
+    degree: { id: "Mahasiswa Teknik Informatika", en: "Informatics Engineering Student" },
     institution: "Universitas Nusa Putra",
     location: "Indonesia",
-    period: "2024 - 2028",
-    gpa: "3.59 / 4.00",
+    period: "Sedang berjalan",
     description: {
-      id: "Fokus studi pada Rekayasa Perangkat Lunak, Arsitektur Sistem Terdistribusi, dan Penerapan Algoritma Kecerdasan Buatan.",
-      en: "Specialized in Software Engineering, Distributed Systems Architecture, and Applied AI Algorithms.",
+      id: "Mengembangkan kemampuan melalui perkuliahan, eksplorasi mandiri, project, dan kegiatan pengembangan kompetensi.",
+      en: "Building skills through coursework, independent exploration, projects, and professional development activities.",
     },
     highlights: {
-      id: [
-        "-",
-      ],
-      en: [
-        "-",
-      ],
+      id: ["Workshop Teknik Informatika", "GIS dan Manajemen Proyek TI", "Software Architecture dan System Integration"],
+      en: ["Informatics workshop", "GIS and IT Project Management", "Software Architecture and System Integration"],
     },
-    badgeText: "-",
     iconType: "university",
-  },
-  {
-    id: "edu-2",
-    degree: {
-      id: "Sertifikasi Workshop Teknik Informatika 2025",
-      en: "2025 Informatics Engineering Workshop Certification",
-    },
-    institution: "Nusa Putra University & NUTRAL",
-    location: "Auditorium Nusa Putra University",
-    period: "2025",
-    description: {
-      id: "Mempercepat Pengembangan AI dengan DevOps: Menjembatani Otomatisasi dan Kecerdasan",
-      en: "Accelerating AI Development with DevOps: Bridging Automation and Intelligence",
-    },
-    highlights: {
-      id: [
-        "Software Engineer & AI Development Expert Speaker",
-        "Workshop Otomatisasi dan Kecerdasan dalam DevOps",
-        "AI & DevOps Integration for Rapid Prototyping and Deployment",
-      ],
-      en: [
-        "Software Engineer & AI Development Expert Speaker",
-        "Automation and Intelligence in DevOps Workshop",
-        "AI & DevOps Integration for Rapid Prototyping and Deployment",
-      ],
-    },
-    badgeText: "Certified Specialist",
-    iconType: "cert",
-  },
-  {
-    id: "edu-3",
-    degree: {
-      id: "Sekolah Menengah Atas (MIPA & Olimpiade Komputer)",
-      en: "High School (Mathematics & Computer Science Olympiad Track)",
-    },
-    institution: "SMA Negeri Unggulan",
-    location: "Indonesia",
-    period: "2017 - 2020",
-    description: {
-      id: "Jurusan Matematika dan Ilmu Pengetahuan Alam dengan fokus kompetisi Olimpiade Sains Nasional (OSN) Bidang Informatika/Komputer.",
-      en: "Mathematics and Natural Sciences major with competitive focus on National Science Olympiad in Informatics/Computer Science.",
-    },
-    highlights: {
-      id: [
-        "Medalis Olimpiade Sains Informatika Tingkat Provinsi",
-        "Pendiri Komunitas Coding & Robotika Sekolah",
-        "Lulusan Terbaik Bidang Akademik Sains & Matematika",
-      ],
-      en: [
-        "Provincial Informatics Science Olympiad Medalist",
-        "Founder of the School Coding & Robotics Club",
-        "Top Graduate in Academic Science & Mathematics Division",
-      ],
-    },
-    badgeText: "Olympiad Honor",
-    iconType: "school",
   },
 ];
 
-export const EDUCATION_PHOTOS: EducationPhoto[] = [
-  {
-    id: "photo-1",
-    title: {
-      id: "Momen Wisuda Sarjana & Penghargaan Cum Laude",
-      en: "Graduation Day & Cum Laude Honors Ceremony",
-    },
-    category: {
-      id: "Wisuda & Kelulusan",
-      en: "Graduation & Honors",
-    },
-    date: "2024",
-    imageUrl: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1200&auto=format&fit=crop",
-    description: {
-      id: "Perayaan kelulusan Sarjana Ilmu Komputer dengan penghargaan predikat kehormatan Cum Laude bersama dosen pembimbing dan rekan sejawat.",
-      en: "Graduation celebration for Bachelor of Computer Science with Cum Laude distinction alongside professors and peers.",
-    },
-    location: "Auditorium Utama Kampus",
-  },
-  {
-    id: "photo-2",
-    title: {
-      id: "Juara 1 Hackathon Inovasi Teknologi Nasional",
-      en: "1st Place National Tech Innovation Hackathon",
-    },
-    category: {
-      id: "Kompetisi & Hackathon",
-      en: "Competition & Hackathon",
-    },
-    date: "2023",
-    imageUrl: "https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=1200&auto=format&fit=crop",
-    description: {
-      id: "Mempresentasikan prototipe platform cerdas berbasis AI dan arsitektur serverless di babak grand final 48 jam nonstop.",
-      en: "Presenting an AI-powered smart platform and serverless prototype at the 48-hour nonstop grand finals.",
-    },
-    location: "Jakarta Tech Innovation Hub",
-  },
-  {
-    id: "photo-3",
-    title: {
-      id: "Riset Laboratorium Komputasi & AI",
-      en: "Computing & AI Research Laboratory",
-    },
-    category: {
-      id: "Riset & Akademik",
-      en: "Research & Academic",
-    },
-    date: "2023",
-    imageUrl: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop",
-    description: {
-      id: "Kolaborasi bersama tim laboratorium dalam pengembangan sistem pemrosesan bahasa alami dan visualisasi data performa tinggi.",
-      en: "Collaborating with laboratory researchers on NLP pipelines and high-throughput real-time data visualization.",
-    },
-    location: "Advanced Computing Lab",
-  },
-  {
-    id: "photo-4",
-    title: {
-      id: "Pembicara Workshop & Mentoring Mahasiswa Baru",
-      en: "Workshop Speaker & Junior Developer Mentorship",
-    },
-    category: {
-      id: "Berbagi & Komunitas",
-      en: "Community & Speaking",
-    },
-    date: "2024",
-    imageUrl: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?q=80&w=1200&auto=format&fit=crop",
-    description: {
-      id: "Mengisi sesi pengenalan Modern Web Architecture, React 19, dan Best Practice TypeScript untuk 150+ mahasiswa.",
-      en: "Delivering a keynote session on Modern Web Architecture, React 19, and TypeScript Best Practices for 150+ students.",
-    },
-    location: "Faculty Hall & Tech Center",
-  },
-];
+export const EDUCATION_PHOTOS: EducationPhoto[] = [];
 
 export const SKILL_CATEGORIES: SkillCategory[] = [
   {
-    id: "frontend",
-    name: { id: "Frontend & Creative UI", en: "Frontend & Creative UI" },
-    iconName: "Layout",
+    id: "development",
+    name: { id: "Bahasa & Pengembangan", en: "Languages & Development" },
+    iconName: "Code2",
     skills: [
-      { name: "React 19 / Next.js", level: 5, category: "frontend", yearsOfExp: "> 6 Bln", isFavorite: false },
-      { name: "TypeScript", level: 1, category: "frontend", yearsOfExp: "< 2 Bln", isFavorite: false },
-      { name: "Tailwind CSS v4", level: 1, category: "frontend", yearsOfExp: "< 2 Bln", isFavorite: false },
-      { name: "Three.js / WebGL / Canvas", level: 1, category: "frontend", yearsOfExp: "< 1 Bln", isFavorite: false },
-      { name: "HTML5 / CSS3", level: 70, category: "frontend", yearsOfExp: "> 2 Thn", isFavorite: true },
+      { name: "Python", level: 0, category: "development", yearsOfExp: "", isFavorite: false },
+      { name: "JavaScript", level: 0, category: "development", yearsOfExp: "", isFavorite: false },
+      { name: "TypeScript", level: 0, category: "development", yearsOfExp: "", isFavorite: false },
+      { name: "C++", level: 0, category: "development", yearsOfExp: "", isFavorite: false },
+      { name: "HTML", level: 0, category: "development", yearsOfExp: "", isFavorite: false },
+      { name: "CSS", level: 0, category: "development", yearsOfExp: "", isFavorite: false },
+      { name: "Node.js", level: 0, category: "development", yearsOfExp: "", isFavorite: false },
+      { name: "React", level: 0, category: "development", yearsOfExp: "", isFavorite: false },
+      { name: "SQL", level: 0, category: "development", yearsOfExp: "", isFavorite: false },
+      { name: "REST API", level: 0, category: "development", yearsOfExp: "", isFavorite: false },
+      { name: "WebSocket", level: 0, category: "development", yearsOfExp: "", isFavorite: false },
+      { name: "Android", level: 0, category: "development", yearsOfExp: "", isFavorite: false },
+      { name: "Desktop Apps", level: 0, category: "development", yearsOfExp: "", isFavorite: false },
     ],
   },
   {
-    id: "backend",
-    name: { id: "Backend & System Engineering", en: "Backend & System Engineering" },
-    iconName: "Server",
+    id: "hardware",
+    name: { id: "Hardware & Embedded", en: "Hardware & Embedded" },
+    iconName: "Cpu",
     skills: [
-      { name: "Node.js & Express / Fastify", level: 20, category: "backend", yearsOfExp: "> 6 Bln", isFavorite: true },
-      { name: "MySQL", level: 89, category: "backend", yearsOfExp: "> 3 Thn", isFavorite: true },
-      { name: "Python & FastAPI", level: 60, category: "backend", yearsOfExp: "> 2 Thn", isFavorite: false },
+      ...["ESP32", "DHT11", "Ultrasonic Sensor", "Flame Sensor", "Raindrop Sensor", "LCD", "OLED", "GPIO", "Buzzer", "LED", "Serial Communication", "PC Building", "RAM Compatibility"].map((name) => ({
+        name,
+        level: 0,
+        category: "hardware",
+        yearsOfExp: "",
+        isFavorite: false,
+      })),
     ],
   },
   {
-    id: "ai",
-    name: { id: "AI Engineering & Modern LLM", en: "AI Engineering & Modern LLM" },
-    iconName: "Sparkles",
+    id: "design-and-systems",
+    name: { id: "Sistem, Data & Desain", en: "Systems, Data & Design" },
+    iconName: "Layers",
     skills: [
-      { name: "-", level: 0, category: "-", yearsOfExp: "-", isFavorite: true },
-    ],
-  },
-  {
-    id: "devops",
-    name: { id: "Cloud, DevOps & Tools", en: "Cloud, DevOps & Tools" },
-    iconName: "Cloud",
-    skills: [
-      { name: "Git / GitHub Actions CI/CD", level: 80, category: "devops", yearsOfExp: "> 2 Thn", isFavorite: true },
+      ...["Linux", "Networking", "System Integration", "GIS", "Spatial Data", "Relational Database", "Data Modeling", "IT Project Management", "Figma", "Visual Design", "Editing", "Documentation"].map((name) => ({
+        name,
+        level: 0,
+        category: "design-and-systems",
+        yearsOfExp: "",
+        isFavorite: false,
+      })),
     ],
   },
 ];
 
-export const CURRENT_LEARNING: LearningItem[] = [
-  {
-    id: "learn-1",
-    title: "-",
-    topic: {
-      id: "-",
-      en: "-",
-    },
-    progress: 0,
-    status: "in-progress",
-    description: {
-      id: "-",
-      en: "-",
-    },
-    resources: [
-      "-",
-    ],
-    keyTakeaways: {
-      id: [
-        "-",
-      ],
-      en: [
-        "-",
-      ],
-    },
-    startedDate: "-",
-    badgeColor: "emerald",
-  },
+export const LEARNING_AREAS = [
+  "Geographic Information System (GIS)",
+  "Manajemen Proyek Teknologi Informasi",
+  "Software Architecture",
+  "System Integration",
+  "Linux Administration",
+  "Networking",
+  "Android Development",
+  "Backend Development",
+  "AI Application Development",
+  "Internet of Things (IoT)",
+  "Expo Router",
+  "EAS Builds",
+  "Flutter Web",
+  "Glassmorphism UI",
+  "Git & GitHub",
+  "Windows PowerShell LLM CLI (Gemini)",
+  "Hyprland Configuration",
+  "UI/UX",
+  "Hardware Troubleshooting",
+  "Sistem Paralel dan Terdistribusi",
 ];
+
+export const WORKING_STYLE = [
+  { id: "Curious", en: "Curious", description: { id: "Suka mengeksplorasi hal baru dan memahami cara kerja teknologi.", en: "Enjoys exploring new ideas and understanding how technology works." } },
+  { id: "Analitis", en: "Analytical", description: { id: "Mencari hubungan antara gejala dan akar masalah.", en: "Looks for the connection between symptoms and root causes." } },
+  { id: "Teliti", en: "Detail-oriented", description: { id: "Memperhatikan konfigurasi, spesifikasi, dan detail implementasi.", en: "Pays attention to configuration, specifications, and implementation details." } },
+  { id: "Belajar mandiri", en: "Independent learner", description: { id: "Nyaman mempelajari hal baru secara mandiri.", en: "Comfortable learning new things independently." } },
+  { id: "Iteratif", en: "Iterative", description: { id: "Menguji, mengevaluasi, lalu memperbaiki hasil.", en: "Tests, evaluates, and improves the result." } },
+  { id: "Kreatif", en: "Creative", description: { id: "Menikmati perpaduan solusi teknis dan desain visual.", en: "Enjoys combining technical solutions with visual design." } },
+  { id: "Reflektif", en: "Reflective", description: { id: "Mengevaluasi keputusan dan mencari ruang untuk berkembang.", en: "Reflects on decisions and looks for ways to grow." } },
+];
+
+export const CURRENT_LEARNING: LearningItem[] = [];
 
 export const EXPERIENCE_DATA: ExperienceItem[] = [
   {
-    id: "exp-1",
-    role: {
-      id: "-",
-      en: "-",
-    },
-    company: "-",
-    companyUrl: "https://example.com",
-    location: "-",
-    type: { id: "-", en: "-" },
-    period: "-",
+    id: "leafiq-cpo",
+    role: { id: "Chief Production Officer (CPO)", en: "Chief Production Officer (CPO)" },
+    company: "Leafiq.id",
+    location: "Indonesia",
+    type: { id: "Kewirausahaan", en: "Entrepreneurship" },
+    period: "Saat ini",
     isCurrent: true,
     summary: {
-      id: "-",
-      en: "-",
+      id: "Bagian dari Leafiq.id dengan tanggung jawab pada proses produksi, koordinasi pekerjaan, dan pengembangan usaha bersama tim.",
+      en: "Part of Leafiq.id, contributing to production processes, work coordination, and business development with the team.",
     },
     achievements: {
-      id: [
-        "-",
-      ],
-      en: [
-        "-",
-      ],
+      id: ["Lolos pendanaan Program Pembinaan Mahasiswa Wirausaha (P2MW).", "Terpilih sebagai peserta Kewirausahaan Mahasiswa Indonesia (KMI) Expo XVII 2026."],
+      en: ["Selected for funding through the Student Entrepreneur Development Program (P2MW).", "Selected to participate in Indonesia Student Entrepreneurship (KMI) Expo XVII 2026."],
     },
-    technologies: ["-"],
+    technologies: ["Product Development", "Production Operations", "Team Coordination"],
+  },
+  {
+    id: "hmti-academic-coordinator",
+    role: { id: "Koordinator Divisi Akademik Minat dan Bakat", en: "Academic, Interests and Talent Division Coordinator" },
+    company: "Himpunan Mahasiswa Teknik Informatika",
+    location: "Universitas Nusa Putra",
+    type: { id: "Organisasi", en: "Student Organization" },
+    period: "Pengalaman organisasi",
+    summary: {
+      id: "Mengembangkan program kerja, mengoordinasikan divisi, menyusun konsep kegiatan, serta menangani dokumentasi dan media kreatif.",
+      en: "Developed programs, coordinated the division, planned activities, and handled documentation and creative media.",
+    },
+    achievements: {
+      id: ["Menyelenggarakan sosialisasi akademik untuk PKL, SCP, dan KKN serta IT Class.", "Mengelola kegiatan seni musik dan olahraga.", "Memfasilitasi partisipasi mahasiswa dalam IT FAIR XIV, IDEONIC, ARKAVIDIA 10.0, dan P2MW."],
+      en: ["Organized academic sessions for internships, SCP, and KKN, along with IT Class.", "Helped run music and sports activities.", "Facilitated student participation in IT FAIR XIV, IDEONIC, ARKAVIDIA 10.0, and P2MW."],
+    },
+    technologies: ["Koordinasi", "Perencanaan", "Dokumentasi", "Media Kreatif", "IT Class", "PKL · SCP · KKN", "IT FAIR XIV", "IDEONIC", "ARKAVIDIA 10.0", "P2MW"],
   },
 ];
 
 export const FEATURED_PROJECTS: ProjectItem[] = [
   {
-    id: "proj-1",
-    title: "-",
-    tagline: {
-      id: "-",
-      en: "-",
-    },
-    category: "Full-Stack",
-    imageUrl: "-",
-    demoUrl: "-",
-    githubUrl: "-",
-    technologies: ["-"],
+    id: "stream-companion",
+    title: "Stream Companion",
+    tagline: { id: "Rancangan sistem penghubung aplikasi Android dengan komputer Windows untuk live streaming.", en: "A system concept connecting an Android app to a Windows computer for live streaming." },
+    category: "Mobile & API",
+    imageUrl: "",
+    technologies: ["ADB", "WebSocket", "Node.js", "Android", "Windows", "Audio Integration"],
     featured: true,
-    date: "2025",
-    overview: {
-      id: "-",
-      en: "-",
-    },
-    challenges: {
-      id: "-",
-      en: "-",
-    },
-    solutions: {
-      id: "-",
-      en: "-",
-    },
-    metrics: {
-      id: [
-        "-",
-      ],
-      en: [
-        "-",
-      ],
-    },
+    overview: { id: "Sistem yang dirancang untuk menghubungkan aplikasi Android dengan komputer Windows untuk kebutuhan live streaming.", en: "A system designed to connect an Android app with a Windows computer for live streaming." },
+    challenges: { id: "Menghubungkan perangkat dan menangani komunikasi serta kebutuhan audio lintas platform.", en: "Connecting devices and handling cross-platform communication and audio needs." },
+    solutions: { id: "Mengeksplorasi ADB, WebSocket, Node.js, komunikasi antarperangkat, dan integrasi audio.", en: "Explores ADB, WebSocket, Node.js, device communication, and audio integration." },
+    metrics: { id: [], en: [] },
+  },
+  {
+    id: "esp32-smart-monitor",
+    title: "ESP32 Smart Monitor",
+    tagline: { id: "Project IoT untuk membaca sensor dan menampilkan kondisi lingkungan.", en: "An IoT project that reads sensors and displays environmental conditions." },
+    category: "IoT & Embedded",
+    imageUrl: "",
+    technologies: ["ESP32", "DHT11", "Ultrasonic", "Flame Sensor", "Raindrop Sensor", "LCD", "OLED", "LED", "Buzzer", "Push Button"],
+    featured: true,
+    overview: { id: "Project IoT yang menggabungkan ESP32, sensor, dan output untuk memantau kondisi lingkungan.", en: "An IoT project combining an ESP32, sensors, and output devices to monitor environmental conditions." },
+    challenges: { id: "Membaca beberapa sensor dan menyampaikan hasilnya melalui layar serta indikator perangkat.", en: "Reading multiple sensors and presenting their output through displays and device indicators." },
+    solutions: { id: "Menggunakan ESP32, DHT11, sensor ultrasonik, flame dan raindrop sensor, LCD, OLED, LED, buzzer, dan push button.", en: "Uses an ESP32, DHT11, ultrasonic, flame and raindrop sensors, LCD, OLED, LED, buzzer, and push button." },
+    metrics: { id: [], en: [] },
+  },
+  {
+    id: "group-randomizer",
+    title: "Group Randomizer",
+    tagline: { id: "Aplikasi untuk membantu proses pembagian kelompok.", en: "An app that helps organize people into groups." },
+    category: "Full-Stack",
+    imageUrl: "",
+    githubUrl: "https://github.com/mmtz0110/group-randomizer",
+    technologies: [],
+    featured: true,
+    overview: { id: "Project yang berfokus pada pengacakan kelompok secara praktis.", en: "A project focused on making group assignment practical through randomization." },
+    challenges: { id: "Membantu proses pembagian kelompok agar dapat dilakukan dengan praktis.", en: "Making group assignment more practical." },
+    solutions: { id: "Membangun aplikasi pengacak kelompok.", en: "Building a group randomizer application." },
+    metrics: { id: [], en: [] },
+  },
+  {
+    id: "keyboardwarrior",
+    title: "KeyboardWarrior",
+    tagline: { id: "Project personal untuk eksperimen dan implementasi ide software.", en: "A personal project for software experiments and implementing ideas." },
+    category: "Full-Stack",
+    imageUrl: "",
+    githubUrl: "https://github.com/mmtz0110/KeyboardWarrior",
+    technologies: [],
+    featured: true,
+    overview: { id: "Project personal yang menjadi ruang untuk menunjukkan proses pengembangan dan eksperimen.", en: "A personal project used to explore ideas and show the development process." },
+    challenges: { id: "Mengembangkan ide menjadi implementasi software.", en: "Turning an idea into a software implementation." },
+    solutions: { id: "Mengembangkan project secara bertahap melalui eksperimen dan implementasi.", en: "Developing the project through iterative experiments and implementation." },
+    metrics: { id: [], en: [] },
+  },
+  {
+    id: "habit-tracker",
+    title: "Aplikasi Habit Tracker",
+    tagline: { id: "Pelacak kebiasaan mobile dengan pilihan tema gelap dan terang.", en: "A mobile habit tracker with dark and light themes." },
+    category: "Mobile & API",
+    imageUrl: "",
+    technologies: ["Expo Router", "React Native", "Mobile", "Dark Theme", "Light Theme"],
+    featured: true,
+    date: "Agustus 2026",
+    overview: { id: "Aplikasi mobile untuk mencatat dan melacak kebiasaan harian.", en: "A mobile app for recording and tracking daily habits." },
+    challenges: { id: "Menyediakan pengalaman pelacakan kebiasaan yang nyaman dalam kondisi tema berbeda.", en: "Providing a comfortable habit-tracking experience across different themes." },
+    solutions: { id: "Dibuat dengan Expo Router dan mendukung tema gelap serta terang.", en: "Built with Expo Router and supports dark and light themes." },
+    metrics: { id: [], en: [] },
+  },
+  {
+    id: "priv-galer",
+    title: "PRIV GALER",
+    tagline: { id: "Galeri mobile dengan tangkapan kamera instan dan peta Leaflet.", en: "A mobile gallery with instant camera capture and a Leaflet map." },
+    category: "Mobile & API",
+    imageUrl: "",
+    technologies: ["Mobile", "Camera", "Leaflet", "Maps"],
+    featured: true,
+    date: "Agustus 2026",
+    overview: { id: "Aplikasi galeri mobile untuk mengambil foto secara instan dan menghubungkannya dengan peta.", en: "A mobile gallery app for instant photo capture and map integration." },
+    challenges: { id: "Menggabungkan alur kamera dengan tampilan lokasi berbasis peta.", en: "Combining a camera workflow with map-based location display." },
+    solutions: { id: "Menggunakan instant camera capture dan integrasi peta Leaflet.", en: "Uses instant camera capture and Leaflet map integration." },
+    metrics: { id: [], en: [] },
+  },
+  {
+    id: "remote-soundboard-architecture",
+    title: "Arsitektur Remote Soundboard",
+    tagline: { id: "Rancangan controller soundboard jarak jauh melalui Wi-Fi dan USB.", en: "A remote soundboard controller concept over Wi-Fi and USB." },
+    category: "Mobile & API",
+    imageUrl: "",
+    technologies: ["Wi-Fi", "USB", "Key Mapping", "Communication Protocols"],
+    featured: true,
+    date: "September 2026",
+    overview: { id: "Perancangan arsitektur soundboard controller jarak jauh yang mendukung koneksi Wi-Fi dan USB.", en: "An architecture for a remote soundboard controller supporting Wi-Fi and USB." },
+    challenges: { id: "Merancang pemetaan tombol dan komunikasi yang konsisten melalui dua jenis koneksi.", en: "Designing consistent key mapping and communication across two connection types." },
+    solutions: { id: "Mencakup key mapping logic serta rancangan protokol komunikasi.", en: "Covers key mapping logic and communication protocol design." },
+    metrics: { id: [], en: [] },
+  },
+  {
+    id: "automatic-light",
+    title: "Sistem Lampu Otomatis",
+    tagline: { id: "Lampu otomatis berbasis Arduino Uno, LDR, dan LCD I2C.", en: "An automatic light using an Arduino Uno, LDR, and I2C LCD." },
+    category: "IoT & Embedded",
+    imageUrl: "",
+    technologies: ["Arduino Uno", "LDR", "I2C LCD", "C++"],
+    featured: true,
+    date: "April 2026",
+    overview: { id: "Proyek hardware untuk mengendalikan lampu berdasarkan kondisi cahaya sekitar.", en: "A hardware project that controls a light based on ambient brightness." },
+    challenges: { id: "Membaca intensitas cahaya dan menampilkan informasi pada layar.", en: "Reading light intensity and displaying information on a screen." },
+    solutions: { id: "Diprogram dengan C++ pada Arduino Uno, menggunakan sensor LDR dan layar I2C LCD.", en: "Programmed in C++ on an Arduino Uno with an LDR sensor and I2C LCD." },
+    metrics: { id: [], en: [] },
+  },
+  {
+    id: "cafmate",
+    title: "Cafmate",
+    tagline: { id: "Project aplikasi yang menjadi bagian dari perjalanan belajar dan membangun solusi teknologi.", en: "An application project and part of an ongoing journey of learning and building with technology." },
+    category: "Full-Stack",
+    imageUrl: "",
+    githubUrl: "https://github.com/mmtz0110/cafmate",
+    technologies: [],
+    featured: true,
+    overview: { id: "Project aplikasi yang melengkapi eksplorasi pengembangan di luar sistem dan hardware.", en: "An application project that expands exploration beyond systems and hardware." },
+    challenges: { id: "Menerapkan ide ke dalam project aplikasi.", en: "Putting an idea into an application project." },
+    solutions: { id: "Mengembangkan aplikasi sebagai bagian dari proses belajar dan membangun.", en: "Developing an app as part of an ongoing learning and building process." },
+    metrics: { id: [], en: [] },
   },
 ];
