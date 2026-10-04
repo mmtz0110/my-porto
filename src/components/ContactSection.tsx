@@ -112,8 +112,8 @@ export const ContactSection: React.FC = () => {
             <div className="p-6 bg-white border-2 border-[#111310] shadow-[6px_6px_0px_#111310] space-y-4 relative">
               <div className="flex items-center gap-3">
                 <span className="flex h-3 w-3 relative">
-                  <span className="animate-ping absolute inline-flex h-full w-full bg-[#D63229] opacity-75"></span>
-                  <span className="relative inline-flex h-3 w-3 bg-[#D63229]"></span>
+                  <span className="animate-ping absolute inline-flex h-full w-full bg-[#b4befe] opacity-75"></span>
+                  <span className="relative inline-flex h-3 w-3 bg-[#b4befe]"></span>
                 </span>
                 <span className="text-sm font-bold text-[#111310] font-mono uppercase tracking-widest">
                   {lang === "id" ? PERSONAL_INFO.status : PERSONAL_INFO.statusEn}
@@ -128,14 +128,14 @@ export const ContactSection: React.FC = () => {
 
             {/* Direct Contact Methods */}
             <div className="p-6 bg-white border-2 border-[#111310] shadow-[6px_6px_0px_#111310] space-y-6">
-              <h3 className="text-xs font-mono font-bold uppercase tracking-widest text-[#D63229] border-b-2 border-dashed border-gray-300 pb-2">
+              <h3 className="text-xs font-mono font-bold uppercase tracking-widest text-[#b4befe] border-b-2 border-dashed border-gray-300 pb-2">
                 {lang === "id" ? "Saluran Langsung" : "Direct Channels"}
               </h3>
 
               {/* Email Card with 1-Click Copy */}
               <div className="p-4 bg-gray-50 border-2 border-[#111310] flex items-center justify-between gap-3 group">
                 <div className="flex items-center gap-3 overflow-hidden">
-                  <div className="w-12 h-12 bg-[#111310] text-white flex items-center justify-center flex-shrink-0 shadow-[2px_2px_0px_#D63229]">
+                  <div className="w-12 h-12 bg-[#111310] text-white flex items-center justify-center flex-shrink-0 shadow-[2px_2px_0px_#b4befe]">
                     <Mail className="w-5 h-5" />
                   </div>
                   <div className="overflow-hidden">
@@ -152,7 +152,7 @@ export const ContactSection: React.FC = () => {
                   title="Salin Email"
                 >
                   {copiedField === "email" ? (
-                    <Check className="w-5 h-5 text-[#D63229]" />
+                    <Check className="w-5 h-5 text-[#b4befe]" />
                   ) : (
                     <Copy className="w-5 h-5" />
                   )}
@@ -194,7 +194,7 @@ export const ContactSection: React.FC = () => {
                       href={PERSONAL_INFO.socials.linkedin}
                       target="_blank"
                       rel="noreferrer"
-                      className="flex-1 py-3 px-3 bg-[#111310] hover:bg-gray-900 border-2 border-[#111310] shadow-[4px_4px_0px_#D63229] hover:-translate-y-1 hover:shadow-[6px_6px_0px_#D63229] text-white transition-all flex items-center justify-center gap-2 text-xs font-bold font-mono uppercase"
+                      className="flex-1 py-3 px-3 bg-[#111310] hover:bg-gray-900 border-2 border-[#111310] shadow-[4px_4px_0px_#b4befe] hover:-translate-y-1 hover:shadow-[6px_6px_0px_#b4befe] text-white transition-all flex items-center justify-center gap-2 text-xs font-bold font-mono uppercase"
                     >
                       <Linkedin className="w-5 h-5 text-white" />
                       <span>LinkedIn</span>
@@ -223,7 +223,7 @@ export const ContactSection: React.FC = () => {
                   animate={{ opacity: 1, scale: 1 }}
                   className="p-8 bg-[#F6F6F4] border-2 border-[#111310] text-center space-y-4"
                 >
-                  <div className="w-16 h-16 bg-white border-2 border-[#111310] text-[#D63229] flex items-center justify-center mx-auto shadow-[4px_4px_0px_#111310]">
+                  <div className="w-16 h-16 bg-white border-2 border-[#111310] text-[#b4befe] flex items-center justify-center mx-auto shadow-[4px_4px_0px_#111310]">
                     <CheckCircle2 className="w-8 h-8" />
                   </div>
                   <h4 className="text-xl font-bold text-[#111310] uppercase">
@@ -237,7 +237,7 @@ export const ContactSection: React.FC = () => {
                   <button
                     id="send-another-msg-btn"
                     onClick={() => setIsSuccess(false)}
-                    className="mt-6 px-6 py-3 bg-[#111310] text-white font-bold font-mono text-xs uppercase border-2 border-[#111310] shadow-[4px_4px_0px_#D63229] transition-transform active:translate-y-1 active:translate-x-1 active:shadow-none cursor-pointer"
+                    className="mt-6 px-6 py-3 bg-[#111310] text-white font-bold font-mono text-xs uppercase border-2 border-[#111310] shadow-[4px_4px_0px_#b4befe] transition-transform active:translate-y-1 active:translate-x-1 active:shadow-none cursor-pointer"
                   >
                     {lang === "id" ? "Kirim Pesan Lain" : "Send Another Message"}
                   </button>
@@ -245,7 +245,7 @@ export const ContactSection: React.FC = () => {
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5 text-left">
                   {errorMessage && (
-                    <div className="p-4 bg-white border-2 border-[#D63229] text-[#D63229] font-bold font-mono text-xs uppercase">
+                    <div className="p-4 bg-white border-2 border-[#b4befe] text-[#b4befe] font-bold font-mono text-xs uppercase">
                       {errorMessage}
                     </div>
                   )}
@@ -254,7 +254,7 @@ export const ContactSection: React.FC = () => {
                     {/* Name */}
                     <div className="space-y-2">
                       <label htmlFor="contact-name" className="text-[10px] font-mono font-bold text-[#111310] uppercase tracking-widest">
-                        {lang === "id" ? "Nama Lengkap" : "Full Name"} <span className="text-[#D63229]">*</span>
+                        {lang === "id" ? "Nama Lengkap" : "Full Name"} <span className="text-[#b4befe]">*</span>
                       </label>
                       <input
                         id="contact-name"
@@ -270,7 +270,7 @@ export const ContactSection: React.FC = () => {
                     {/* Email */}
                     <div className="space-y-2">
                       <label htmlFor="contact-email" className="text-[10px] font-mono font-bold text-[#111310] uppercase tracking-widest">
-                        {lang === "id" ? "Alamat Email" : "Email Address"} <span className="text-[#D63229]">*</span>
+                        {lang === "id" ? "Alamat Email" : "Email Address"} <span className="text-[#b4befe]">*</span>
                       </label>
                       <input
                         id="contact-email"
@@ -318,7 +318,7 @@ export const ContactSection: React.FC = () => {
                   {/* Message */}
                   <div className="space-y-2">
                     <label htmlFor="contact-message" className="text-[10px] font-mono font-bold text-[#111310] uppercase tracking-widest">
-                      {lang === "id" ? "Isi Pesan" : "Message"} <span className="text-[#D63229]">*</span>
+                      {lang === "id" ? "Isi Pesan" : "Message"} <span className="text-[#b4befe]">*</span>
                     </label>
                     <textarea
                       id="contact-message"
@@ -340,7 +340,7 @@ export const ContactSection: React.FC = () => {
                     id="submit-contact-form-btn"
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full py-4 px-6 bg-[#D63229] hover:bg-[#b02921] text-white font-bold font-mono text-sm uppercase flex items-center justify-center gap-2 border-2 border-[#111310] shadow-[4px_4px_0px_#111310] transition-transform active:translate-y-1 active:translate-x-1 active:shadow-none disabled:opacity-70 cursor-pointer mt-4"
+                    className="w-full py-4 px-6 bg-[#b4befe] hover:bg-[#89b4fa] text-white font-bold font-mono text-sm uppercase flex items-center justify-center gap-2 border-2 border-[#111310] shadow-[4px_4px_0px_#111310] transition-transform active:translate-y-1 active:translate-x-1 active:shadow-none disabled:opacity-70 cursor-pointer mt-4"
                   >
                     {isSubmitting ? (
                       <>

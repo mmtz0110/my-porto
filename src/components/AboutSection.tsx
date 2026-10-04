@@ -37,8 +37,8 @@ export const AboutSection: React.FC = () => {
     <section id="about" className="py-20 md:py-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
-          <div>
-            <p className="mb-4 font-mono text-xs uppercase tracking-[0.2em] text-[#D63229]">
+          <div className="profile-panel p-6 sm:p-8">
+            <p className="mb-4 font-mono text-xs uppercase tracking-[0.2em] text-[#b4befe]">
               {lang === "id" ? "Profil" : "Profile"}
             </p>
             <h2 className="max-w-xl text-4xl font-semibold leading-tight tracking-tight text-[#111310] sm:text-5xl">
@@ -47,7 +47,7 @@ export const AboutSection: React.FC = () => {
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-[#111310]/75">
               {PERSONAL_INFO.bio[lang]} {PERSONAL_INFO.tagline[lang]}
             </p>
-            <p className="mt-6 flex items-start gap-3 border-l-2 border-[#D63229] pl-4 text-sm leading-relaxed text-[#111310]/70">
+            <p className="mt-6 flex items-start gap-3 border-l-2 border-[#b4befe] pl-4 text-sm leading-relaxed text-[#111310]/70">
               <Search className="mt-0.5 h-4 w-4 shrink-0" aria-hidden="true" />
               {lang === "id"
                 ? "Saya lebih suka mencari akar masalah daripada berhenti di pesan error."
@@ -56,14 +56,14 @@ export const AboutSection: React.FC = () => {
           </div>
 
           <div className="space-y-10">
-            <div>
+            <div className="profile-panel p-6 sm:p-8">
               <h3 className="mb-4 text-lg font-semibold text-[#111310]">
                 {lang === "id" ? "Tentang saya" : "A little about me"}
               </h3>
               <ul className="grid gap-3 sm:grid-cols-2">
                 {ABOUT_POINTS[lang].map((point) => (
                   <li key={point} className="flex gap-3 border-t border-[#111310]/15 py-3 text-sm leading-relaxed text-[#111310]/75">
-                    <ArrowDownRight className="mt-0.5 h-4 w-4 shrink-0 text-[#D63229]" aria-hidden="true" />
+                    <ArrowDownRight className="mt-0.5 h-4 w-4 shrink-0 text-[#b4befe]" aria-hidden="true" />
                     <span>{point}</span>
                   </li>
                 ))}
@@ -72,7 +72,7 @@ export const AboutSection: React.FC = () => {
 
             <div>
               <h3 className="mb-4 flex items-center gap-2 text-lg font-semibold text-[#111310]">
-                <Compass className="h-5 w-5 text-[#D63229]" aria-hidden="true" />
+                <Compass className="h-5 w-5 text-[#b4befe]" aria-hidden="true" />
                 {lang === "id" ? "Bidang yang menarik bagi saya" : "Areas I want to explore"}
               </h3>
               <div className="flex flex-wrap gap-2">
@@ -87,9 +87,9 @@ export const AboutSection: React.FC = () => {
         </div>
 
         <div className="mt-20 grid gap-12 border-t border-[#111310]/20 pt-10 lg:grid-cols-2">
-          <div>
+          <div className="profile-panel p-6 sm:p-8">
             <h3 className="mb-5 flex items-center gap-2 text-xl font-semibold text-[#111310]">
-              <Lightbulb className="h-5 w-5 text-[#D63229]" aria-hidden="true" />
+              <Lightbulb className="h-5 w-5 text-[#b4befe]" aria-hidden="true" />
               {lang === "id" ? "Cara saya bekerja" : "How I work"}
             </h3>
             <p className="max-w-2xl text-sm leading-7 text-[#111310]/75">
@@ -104,7 +104,7 @@ export const AboutSection: React.FC = () => {
             </p>
           </div>
 
-          <div>
+          <div className="profile-panel p-6 sm:p-8">
             <h3 className="mb-5 text-xl font-semibold text-[#111310]">
               {lang === "id" ? "Yang sedang saya pelajari" : "What I am learning"}
             </h3>

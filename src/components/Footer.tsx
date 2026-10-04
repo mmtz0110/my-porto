@@ -15,7 +15,7 @@ export const Footer: React.FC = () => {
   };
 
   return (
-    <footer id="main-footer" className="bg-[#111310] text-[#F6F6F4] border-t-4 border-[#D63229] py-12 text-sm font-mono">
+    <footer id="main-footer" className="bg-[#111310] text-[#F6F6F4] border-t-4 border-[#b4befe] py-12 text-sm font-mono">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b-2 border-dashed border-gray-700">
           {/* Brand */}
@@ -36,7 +36,7 @@ export const Footer: React.FC = () => {
               href={PERSONAL_INFO.socials.github}
               target="_blank"
               rel="noreferrer"
-              className="p-3 bg-[#F6F6F4] text-[#111310] hover:bg-[#D63229] hover:text-white transition-colors"
+              className="p-3 bg-[#F6F6F4] text-[#111310] hover:bg-[#b4befe] hover:text-white transition-colors"
               aria-label="GitHub Agnaya"
             >
               <Github className="w-5 h-5" />
@@ -47,7 +47,7 @@ export const Footer: React.FC = () => {
                 href={PERSONAL_INFO.socials.linkedin}
                 target="_blank"
                 rel="noreferrer"
-                className="p-3 bg-[#F6F6F4] text-[#111310] hover:bg-[#D63229] hover:text-white transition-colors"
+                className="p-3 bg-[#F6F6F4] text-[#111310] hover:bg-[#b4befe] hover:text-white transition-colors"
                 aria-label="LinkedIn Agnaya"
               >
                 <Linkedin className="w-5 h-5" />
@@ -56,7 +56,7 @@ export const Footer: React.FC = () => {
             <a
               id="footer-email-link"
               href={`mailto:${PERSONAL_INFO.email}`}
-              className="p-3 bg-[#F6F6F4] text-[#111310] hover:bg-[#D63229] hover:text-white transition-colors"
+              className="p-3 bg-[#F6F6F4] text-[#111310] hover:bg-[#b4befe] hover:text-white transition-colors"
               aria-label="Email Agnaya"
             >
               <Mail className="w-5 h-5" />
@@ -67,7 +67,7 @@ export const Footer: React.FC = () => {
           <button
             id="back-to-top-btn"
             onClick={scrollToTop}
-            className="px-5 py-3 bg-[#F6F6F4] text-[#111310] hover:bg-gray-200 transition-colors flex items-center gap-2 font-bold uppercase text-xs cursor-pointer shadow-[2px_2px_0px_#D63229] active:translate-y-px active:translate-x-px active:shadow-none"
+            className="px-5 py-3 bg-[#F6F6F4] text-[#111310] hover:bg-gray-200 transition-colors flex items-center gap-2 font-bold uppercase text-xs cursor-pointer shadow-[2px_2px_0px_#b4befe] active:translate-y-px active:translate-x-px active:shadow-none"
           >
             <span>{lang === "id" ? "Kembali ke Atas" : "Back to Top"}</span>
             <ArrowUp className="w-4 h-4" />

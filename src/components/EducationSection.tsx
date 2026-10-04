@@ -115,7 +115,7 @@ export const EducationSection: React.FC = () => {
                           {item.degree[lang]}
                         </h3>
                       </div>
-                      <div className="text-sm font-mono font-bold text-[#D63229] uppercase tracking-widest">
+                      <div className="text-sm font-mono font-bold text-[#b4befe] uppercase tracking-widest">
                         {item.institution}
                       </div>
                       <div className="flex flex-wrap items-center gap-4 text-xs font-mono font-bold text-[#111310] pt-1">
@@ -150,7 +150,7 @@ export const EducationSection: React.FC = () => {
                         key={i}
                         className="flex items-start gap-3 text-sm text-[#111310] font-medium"
                       >
-                        <CheckCircle2 className="w-5 h-5 text-[#D63229] flex-shrink-0" />
+                        <CheckCircle2 className="w-5 h-5 text-[#b4befe] flex-shrink-0" />
                         <span>{hl}</span>
                       </div>
                     ))}
@@ -207,7 +207,7 @@ export const EducationSection: React.FC = () => {
                     
                     {/* View Button hint */}
                     <div className="absolute inset-0 bg-[#111310]/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                      <span className="px-4 py-2 bg-white text-[#111310] border-2 border-[#111310] text-xs font-bold font-mono uppercase flex items-center gap-2 shadow-[4px_4px_0px_#D63229]">
+                      <span className="px-4 py-2 bg-white text-[#111310] border-2 border-[#111310] text-xs font-bold font-mono uppercase flex items-center gap-2 shadow-[4px_4px_0px_#b4befe]">
                         <Camera className="w-4 h-4" />
                         {lang === "id" ? "Lihat Foto" : "View Photo"}
                       </span>

@@ -12,7 +12,7 @@ import { Footer } from "./components/Footer";
 export default function App() {
   return (
     <PortfolioProvider>
-      <div id="portfolio-app-root" className="min-h-screen bg-[#09090b] text-zinc-100 selection:bg-[#D63229] selection:text-white relative overflow-x-hidden font-sans">
+      <div id="portfolio-app-root" className="min-h-screen bg-[#1e1e2e] text-[#cdd6f4] selection:bg-[#b4befe] selection:text-white relative overflow-x-hidden font-sans">
         
         <div aria-hidden="true" className="fixed inset-0 pointer-events-none -z-20 bg-[radial-gradient(#ffffff_0.5px,transparent_0.5px)] [background-size:32px_32px] opacity-[0.08]" />
         

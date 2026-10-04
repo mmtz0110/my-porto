@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { motion, useReducedMotion } from "motion/react";
+import React, { Suspense, lazy, useState, useEffect } from "react";
+import { motion } from "motion/react";
 import {
   ArrowRight,
   GraduationCap,
@@ -7,26 +7,22 @@ import {
 } from "lucide-react";
 import { PERSONAL_INFO, DEFAULT_ID_CARD_CONFIG } from "../data/portfolioData";
 import { usePortfolio } from "../context/PortfolioContext";
-import { Interactive3DIDCard } from "./Interactive3DIDCard";
+
+const Interactive3DIDCard = lazy(() =>
+  import("./Interactive3DIDCard").then((module) => ({ default: module.Interactive3DIDCard })),
+);
+const NAME_PHRASES = ["Agnaya\nMumtazul Wafir", "Mumtaz"];
 
 export const Hero3DCard: React.FC = () => {
   const { lang, setActiveSection } = usePortfolio();
   const [typedName, setTypedName] = useState("");
   const [phase, setPhase] = useState<"typing" | "deleting">("typing");
   const [phraseIndex, setPhraseIndex] = useState(0);
-  const shouldReduceMotion = useReducedMotion();
-
-  const phrases = ["Agnaya\nMumtazul Wafir"];
 
   // Typing effect hook (Looping with Backspace)
   useEffect(() => {
-    if (shouldReduceMotion) {
-      setTypedName(phrases[0]);
-      return;
-    }
-
     let timeout: ReturnType<typeof setTimeout>;
-    const currentPhrase = phrases[phraseIndex];
+    const currentPhrase = NAME_PHRASES[phraseIndex];
 
     if (phase === "typing") {
       if (typedName.length < currentPhrase.length) {
@@ -37,24 +33,24 @@ export const Hero3DCard: React.FC = () => {
         // Finished typing, wait before changing phase to deleting
         timeout = setTimeout(() => {
           setPhase("deleting");
-        }, phraseIndex === 0 ? 2000 : 1000); // 2s for phrase 1, 1s for phrase 2
+        }, 2000); // Hold each completed name for two seconds
       }
     } else if (phase === "deleting") {
       if (typedName.length > 0) {
         timeout = setTimeout(() => {
           setTypedName(currentPhrase.slice(0, typedName.length - 1));
-        }, 60); // Deleting speed (usually faster than typing)
+        }, 45); // Erase faster than the typing cadence
       } else {
         // Finished deleting, wait a little bit then move to next phrase
         timeout = setTimeout(() => {
-          setPhraseIndex((prev) => (prev + 1) % phrases.length);
+          setPhraseIndex((prev) => (prev + 1) % NAME_PHRASES.length);
           setPhase("typing");
         }, 300);
       }
     }
 
     return () => clearTimeout(timeout);
-  }, [typedName, phase, phraseIndex, shouldReduceMotion]);
+  }, [typedName, phase, phraseIndex]);
 
   // Scroll to sections
   const scrollTo = (id: string) => {
@@ -86,8 +82,8 @@ export const Hero3DCard: React.FC = () => {
               className="inline-flex flex-wrap items-center gap-2 border-b border-[#111310]/30 pb-3"
             >
               <span className="flex h-2.5 w-2.5 relative">
-                <span className="animate-ping absolute inline-flex h-full w-full bg-[#D63229] opacity-75"></span>
-                <span className="relative inline-flex h-2.5 w-2.5 bg-[#D63229]"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full bg-[#b4befe] opacity-75"></span>
+                <span className="relative inline-flex h-2.5 w-2.5 bg-[#b4befe]"></span>
               </span>
               <span className="text-xs font-mono font-medium text-[#111310] tracking-wide">
                 {lang === "id" ? PERSONAL_INFO.status : PERSONAL_INFO.statusEn}
@@ -107,30 +103,30 @@ export const Hero3DCard: React.FC = () => {
                 {lang === "id" ? (
                   <>
                     Halo, Saya <br/>
-                    <span aria-hidden="true" className="border-l-4 border-[#D63229] pl-4 inline-block mt-2 min-h-[1.1em] overflow-hidden whitespace-pre-wrap align-top">
+                    <span aria-hidden="true" className="border-l-4 border-[#b4befe] pl-4 inline-block mt-2 min-h-[1.1em] overflow-hidden whitespace-pre-wrap align-top">
                       {typedName}
                       <motion.span
-                        animate={shouldReduceMotion ? { opacity: 1 } : { opacity: [1, 0, 1] }}
+                        animate={{ opacity: [1, 0, 1] }}
                         transition={{ repeat: Infinity, duration: 0.8, ease: "linear" }}
-                        className="inline-block w-2 sm:w-3 h-[0.8em] bg-[#D63229] ml-1 sm:ml-2 align-baseline"
+                        className="inline-block w-2 sm:w-3 h-[0.8em] bg-[#b4befe] ml-1 sm:ml-2 align-baseline"
                       />
                     </span>
                   </>
                 ) : (
                   <>
                     Hi, I am <br/>
-                    <span aria-hidden="true" className="border-l-4 border-[#D63229] pl-4 inline-block mt-2 min-h-[1.1em] overflow-hidden whitespace-pre-wrap align-top">
+                    <span aria-hidden="true" className="border-l-4 border-[#b4befe] pl-4 inline-block mt-2 min-h-[1.1em] overflow-hidden whitespace-pre-wrap align-top">
                       {typedName}
                       <motion.span
-                        animate={shouldReduceMotion ? { opacity: 1 } : { opacity: [1, 0, 1] }}
+                        animate={{ opacity: [1, 0, 1] }}
                         transition={{ repeat: Infinity, duration: 0.8, ease: "linear" }}
-                        className="inline-block w-2 sm:w-3 h-[0.8em] bg-[#D63229] ml-1 sm:ml-2 align-baseline"
+                        className="inline-block w-2 sm:w-3 h-[0.8em] bg-[#b4befe] ml-1 sm:ml-2 align-baseline"
                       />
                     </span>
                   </>
                 )}
               </h1>
-              <p className="text-lg sm:text-xl font-mono font-medium text-[#D63229]">
+              <p className="text-lg sm:text-xl font-mono font-medium text-[#b4befe]">
                 {PERSONAL_INFO.title}
               </p>
               <p className="text-[#111310] font-medium text-lg leading-relaxed max-w-2xl">
@@ -169,7 +165,7 @@ export const Hero3DCard: React.FC = () => {
               <button
                 id="hero-contact-btn"
                 onClick={() => scrollTo("contact")}
-                className="px-6 py-4 bg-[#D63229] hover:bg-[#b02921] text-white font-bold font-mono text-sm uppercase flex items-center gap-2 border-2 border-[#111310] shadow-[4px_4px_0px_#111310] transition-transform active:translate-x-1 active:translate-y-1 active:shadow-none cursor-pointer"
+                className="px-6 py-4 bg-[#b4befe] hover:bg-[#89b4fa] text-white font-bold font-mono text-sm uppercase flex items-center gap-2 border-2 border-[#111310] shadow-[4px_4px_0px_#111310] transition-transform active:translate-x-1 active:translate-y-1 active:shadow-none cursor-pointer"
               >
                 <span>{lang === "id" ? "Hubungi Agnaya" : "Contact Agnaya"}</span>
                 <ArrowRight className="w-5 h-5" />
@@ -189,9 +185,9 @@ export const Hero3DCard: React.FC = () => {
           {/* Right Column: Interactive 3D WebGL Physical ID Card */}
           <div className="lg:col-span-6 flex flex-col items-center justify-center">
             <div className="w-full max-w-[560px]">
-              <Interactive3DIDCard
-                cardConfig={DEFAULT_ID_CARD_CONFIG}
-              />
+              <Suspense fallback={<div className="h-[560px] w-full" role="status" aria-label="Memuat kartu identitas 3D" />}>
+                <Interactive3DIDCard cardConfig={DEFAULT_ID_CARD_CONFIG} />
+              </Suspense>
             </div>
           </div>
 

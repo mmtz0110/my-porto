@@ -131,7 +131,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="p-4 rounded-2xl bg-zinc-950/80 border border-zinc-800 space-y-2">
                 <div className="flex items-center gap-2 text-zinc-300 text-xs font-mono font-bold uppercase tracking-wider">
-                  <AlertCircle className="w-4 h-4 text-amber-400" />
+                  <AlertCircle className="w-4 h-4 text-[#f9e2af]" />
                   <span>{lang === "id" ? "Tantangan Utama" : "Core Challenge"}</span>
                 </div>
                 <p className="text-zinc-300 text-xs sm:text-sm leading-relaxed">

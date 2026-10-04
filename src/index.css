@@ -8,31 +8,44 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    background-color: #09090b;
+    background-color: #1e1e2e;
   }
   
   body {
-    background-color: #09090b;
-    color: #f4f4f5;
-    @apply antialiased selection:bg-[#D63229] selection:text-white;
+    background-color: #1e1e2e;
+    color: #cdd6f4;
+    @apply antialiased selection:bg-[#b4befe] selection:text-[#1e1e2e];
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   }
 }
 
-/* Dark portfolio palette overrides for existing component utility classes. */
-#portfolio-app-root [class*="text-[#111310]"] { color: #f4f4f5; }
+/* Catppuccin Mocha-inspired blue-gray surfaces and lavender accents. */
+#portfolio-app-root [class*="text-[#111310]"] { color: #cdd6f4; }
 #portfolio-app-root [class*="bg-white"],
 #portfolio-app-root [class*="bg-[#F6F6F4]"],
 #portfolio-app-root [class*="bg-gray-50"],
 #portfolio-app-root [class*="bg-gray-100"],
 #portfolio-app-root [class*="bg-gray-200"],
-#portfolio-app-root [class*="bg-[#E8E8E3]"] { background-color: #18181b; }
-#portfolio-app-root [class*="border-[#111310]"] { border-color: #3f3f46; }
-#portfolio-app-root [class*="border-[#111310]/"] { border-color: rgb(161 161 170 / 0.35); }
-#portfolio-app-root [class*="text-[#111310]/"] { color: rgb(228 228 231 / 0.78); }
-#portfolio-app-root input { color: #f4f4f5; }
-#portfolio-app-root input::placeholder { color: #a1a1aa; }
-#portfolio-app-root [class*="shadow-["] { --tw-shadow-color: rgb(255 255 255 / 0.14); }
+#portfolio-app-root [class*="bg-[#E8E8E3]"] { background-color: #313244; }
+#portfolio-app-root [class*="border-[#111310]"] { border-color: #45475a; }
+#portfolio-app-root [class*="border-[#111310]/"] { border-color: rgb(166 173 200 / 0.28); }
+#portfolio-app-root [class*="text-[#111310]/"] { color: rgb(186 194 222 / 0.88); }
+#portfolio-app-root [class*="text-[#b4befe]"] { color: #b4befe; }
+#portfolio-app-root [class*="bg-[#b4befe]"] { background-color: #b4befe; color: #1e1e2e; }
+#portfolio-app-root [class*="hover:bg-[#89b4fa]"]:hover { background-color: #89b4fa; }
+#portfolio-app-root button[aria-pressed="true"] {
+  color: #1e1e2e;
+  background-color: #b4befe;
+  border-color: #b4befe;
+}
+#portfolio-app-root input { color: #cdd6f4; }
+#portfolio-app-root input::placeholder { color: #a6adc8; }
+.profile-panel {
+  background: #242436;
+  border: 1px solid #45475a;
+  box-shadow: 5px 5px 0 rgb(0 0 0 / 0.22);
+}
+#portfolio-app-root [class*="shadow-["] { --tw-shadow-color: rgb(0 0 0 / 0.38); }
 
 /* 3D Perspective & Card Styles */
 .perspective-1000 {
@@ -94,7 +107,7 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #F6F6F4;
+  background: #1e1e2e;
 }
 
 ::-webkit-scrollbar-thumb {

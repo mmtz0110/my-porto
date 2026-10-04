@@ -22,7 +22,7 @@ export const ExperienceSection: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<ProjectItem | null>(null);
   const [activeCategory, setActiveCategory] = useState<string>("All");
 
-  const projectCategories = ["All", "AI & ML", "Full-Stack", "Web & 3D", "Mobile & API", "IoT & Embedded"];
+  const projectCategories = ["All", "AI & ML", "Full-Stack", "Mobile & API", "IoT & Embedded"];
 
   const filteredProjects =
     activeCategory === "All"
@@ -74,13 +74,13 @@ export const ExperienceSection: React.FC = () => {
                           {exp.role[lang]}
                         </h3>
                         {exp.isCurrent && (
-                          <span className="px-2 py-1 bg-[#D63229] text-white border-2 border-[#111310] text-[10px] font-mono font-bold uppercase flex items-center gap-1.5 shadow-[2px_2px_0px_#111310]">
+                          <span className="px-2 py-1 bg-[#b4befe] text-white border-2 border-[#111310] text-[10px] font-mono font-bold uppercase flex items-center gap-1.5 shadow-[2px_2px_0px_#111310]">
                             <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
                             {lang === "id" ? "Saat Ini" : "Current"}
                           </span>
                         )}
                       </div>
-                      <div className="text-sm font-mono font-bold text-[#D63229] uppercase tracking-widest">
+                      <div className="text-sm font-mono font-bold text-[#b4befe] uppercase tracking-widest">
                         {exp.company}
                       </div>
                       <div className="flex flex-wrap items-center gap-3 text-[10px] font-mono font-bold text-[#111310] uppercase pt-1">
@@ -107,7 +107,7 @@ export const ExperienceSection: React.FC = () => {
                   {/* Measurable Achievements */}
                   <div className="mt-6 pt-6 border-t-2 border-dashed border-gray-300 space-y-3">
                     <div className="text-xs font-mono font-bold text-[#111310] uppercase flex items-center gap-2">
-                      <TrendingUp className="w-4 h-4 text-[#D63229]" />
+                      <TrendingUp className="w-4 h-4 text-[#b4befe]" />
                       {lang === "id" ? "Dampak & Pencapaian Utama" : "Key Achievements & Impact"}
                     </div>
                     <div className="grid grid-cols-1 gap-2">
@@ -116,7 +116,7 @@ export const ExperienceSection: React.FC = () => {
                           key={i}
                           className="flex items-start gap-3 p-3 bg-gray-50 border-2 border-[#111310] text-xs sm:text-sm text-[#111310] font-medium"
                         >
-                          <CheckCircle2 className="w-4 h-4 text-[#D63229] flex-shrink-0 mt-0.5" />
+                          <CheckCircle2 className="w-4 h-4 text-[#b4befe] flex-shrink-0 mt-0.5" />
                           <span>{ach}</span>
                         </div>
                       ))}
@@ -166,6 +166,7 @@ export const ExperienceSection: React.FC = () => {
                   key={cat}
                   id={`proj-cat-${cat}-btn`}
                   onClick={() => setActiveCategory(cat)}
+                  aria-pressed={activeCategory === cat}
                   className={`px-4 py-2 text-xs font-mono font-bold uppercase transition-all cursor-pointer border-2 border-[#111310] shadow-[2px_2px_0px_#111310] active:translate-y-0.5 active:translate-x-0.5 active:shadow-none ${
                     activeCategory === cat
                       ? "bg-[#111310] text-white"
@@ -257,7 +258,7 @@ export const ExperienceSection: React.FC = () => {
                     <button
                       id={`view-study-${project.id}-btn`}
                       onClick={() => setSelectedProject(project)}
-                      className="text-[10px] font-mono font-bold text-[#D63229] uppercase flex items-center gap-1 cursor-pointer hover:underline underline-offset-4"
+                      className="text-[10px] font-mono font-bold text-[#b4befe] uppercase flex items-center gap-1 cursor-pointer hover:underline underline-offset-4"
                     >
                       <span>{lang === "id" ? "Detail Lengkap" : "Read Study"}</span>
                       <ArrowUpRight className="w-3.5 h-3.5" />
@@ -269,7 +270,7 @@ export const ExperienceSection: React.FC = () => {
                           href={project.githubUrl}
                           target="_blank"
                           rel="noreferrer"
-                          className="text-[#111310] hover:text-[#D63229] transition-colors"
+                          className="text-[#111310] hover:text-[#b4befe] transition-colors"
                           title="Source Code"
                         >
                           <Github className="w-5 h-5" />
@@ -280,7 +281,7 @@ export const ExperienceSection: React.FC = () => {
                           href={project.demoUrl}
                           target="_blank"
                           rel="noreferrer"
-                          className="text-[#111310] hover:text-[#D63229] transition-colors"
+                          className="text-[#111310] hover:text-[#b4befe] transition-colors"
                           title="Live Demo"
                         >
                           <ExternalLink className="w-5 h-5" />

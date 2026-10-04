@@ -1,13 +1,21 @@
 import React, { useState } from "react";
-import { Search } from "lucide-react";
+import { Code2, Search } from "lucide-react";
+import { LEARNING_AREAS, SKILL_CATEGORIES } from "../data/portfolioData";
 
 const technologyIcons: Record<string, string> = {
   Python: "python", JavaScript: "js", TypeScript: "ts", "C++": "cpp", HTML: "html", CSS: "css",
   "Node.js": "nodejs", React: "react", Linux: "linux", Git: "git", GitHub: "github", Android: "android",
-  "Expo Router": "react", Flutter: "flutter", Arduino: "arduino", ESP32: "arduino", Figma: "figma", SQL: "mysql",
+  "Expo Router": "react", Flutter: "flutter", Arduino: "arduino", ESP32: "arduino", Figma: "figma",
+  SQL: "postgres", "REST API": "postman", WebSocket: "socketio", GIS: "qgis", "Relational Database": "postgres",
+  "Data Modeling": "postgres", "AI Application Development": "tensorflow", "Internet of Things (IoT)": "arduino",
 };
-const iconForTechnology = (name: string) => technologyIcons[name] ?? "code";
-import { LEARNING_AREAS, SKILL_CATEGORIES } from "../data/portfolioData";
+
+const TechnologyIcon: React.FC<{ name: string }> = ({ name }) => {
+  const [failed, setFailed] = useState(false);
+  const icon = technologyIcons[name];
+  if (!icon || failed) return <Code2 className="h-5 w-5 shrink-0 text-[#c8795d]" aria-hidden="true" />;
+  return <img src={`https://skillicons.dev/icons?i=${icon}`} alt="" aria-hidden="true" loading="lazy" className="h-6 w-6 shrink-0 rounded-sm" onError={() => setFailed(true)} />;
+};
 import { usePortfolio } from "../context/PortfolioContext";
 
 export const SkillsSection: React.FC = () => {
@@ -26,7 +34,7 @@ export const SkillsSection: React.FC = () => {
         <div>
           <div className="mb-8 flex flex-col gap-6 border-b border-[#111310]/20 pb-6 md:flex-row md:items-end md:justify-between">
             <div>
-              <p className="mb-3 font-mono text-xs uppercase tracking-[0.2em] text-[#D63229]">
+              <p className="mb-3 font-mono text-xs uppercase tracking-[0.2em] text-[#b4befe]">
                 {lang === "id" ? "Teknologi" : "Technology"}
               </p>
               <h2 className="text-3xl font-semibold tracking-tight text-[#111310] sm:text-5xl">
@@ -77,7 +85,7 @@ export const SkillsSection: React.FC = () => {
             <ul className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-4" aria-live="polite">
               {visibleSkills.map((skill) => (
                 <li key={skill.name} className="flex items-center gap-3 border-b border-[#111310]/15 px-1 py-3 text-sm text-[#111310]/80">
-                  <img src={`https://skillicons.dev/icons?i=${iconForTechnology(skill.name)}`} alt="" aria-hidden="true" loading="lazy" className="h-6 w-6 rounded-sm" />
+                  <TechnologyIcon name={skill.name} />
                   <span>{skill.name}</span>
                 </li>
               ))}
@@ -91,7 +99,7 @@ export const SkillsSection: React.FC = () => {
 
         <div className="grid gap-8 border-t border-[#111310]/20 pt-10 lg:grid-cols-[0.7fr_1.3fr]">
           <div>
-            <p className="mb-3 font-mono text-xs uppercase tracking-[0.2em] text-[#D63229]">
+            <p className="mb-3 font-mono text-xs uppercase tracking-[0.2em] text-[#b4befe]">
               {lang === "id" ? "Proses belajar" : "Learning"}
             </p>
             <h3 className="text-2xl font-semibold tracking-tight text-[#111310] sm:text-3xl">
