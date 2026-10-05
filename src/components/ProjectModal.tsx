@@ -127,6 +127,29 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
               </p>
             </div>
 
+            {project.screenshots && project.screenshots.length > 0 && (
+              <section aria-labelledby="project-documentation-heading" className="space-y-3">
+                <h3 id="project-documentation-heading" className="text-xs font-mono uppercase tracking-widest text-zinc-400 font-bold">
+                  {lang === "id" ? "Dokumentasi" : "Project documentation"}
+                </h3>
+                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                  {project.screenshots.map((screenshot) => (
+                    <figure key={screenshot.imageUrl} className="overflow-hidden border border-zinc-800 bg-zinc-950">
+                      <img
+                        src={screenshot.imageUrl}
+                        alt={screenshot.caption[lang]}
+                        loading="lazy"
+                        className="max-h-[34rem] w-full object-contain"
+                      />
+                      <figcaption className="border-t border-zinc-800 px-3 py-2 text-xs text-zinc-400">
+                        {screenshot.caption[lang]}
+                      </figcaption>
+                    </figure>
+                  ))}
+                </div>
+              </section>
+            )}
+
             {/* Challenge & Solution Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="p-4 rounded-2xl bg-zinc-950/80 border border-zinc-800 space-y-2">

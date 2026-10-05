@@ -123,6 +123,20 @@ export const ExperienceSection: React.FC = () => {
                     </div>
                   </div>
 
+                  {exp.photos && exp.photos.length > 0 && (
+                    <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3" aria-label={lang === "id" ? "Galeri foto pengalaman" : "Experience photo gallery"}>
+                      {exp.photos.map((photo) => (
+                        <img
+                          key={photo.imageUrl}
+                          src={photo.imageUrl}
+                          alt={photo.alt[lang]}
+                          loading="lazy"
+                          className="aspect-[4/3] w-full border-2 border-[#111310] object-cover"
+                        />
+                      ))}
+                    </div>
+                  )}
+
                   {/* Tech Pills */}
                   <div className="flex flex-wrap gap-2 pt-6">
                     {exp.technologies.map((tech) => (

@@ -65,6 +65,7 @@ export interface ExperienceItem {
   isCurrent?: boolean;
   summary: { id: string; en: string };
   achievements: { id: string[]; en: string[] };
+  photos?: { imageUrl: string; alt: { id: string; en: string } }[];
   technologies: string[];
 }
 
@@ -74,6 +75,7 @@ export interface ProjectItem {
   tagline: { id: string; en: string };
   category: "Full-Stack" | "AI & ML" | "Web & 3D" | "Mobile & API" | "IoT & Embedded";
   imageUrl: string;
+  screenshots?: { imageUrl: string; caption: { id: string; en: string } }[];
   demoUrl?: string;
   githubUrl?: string;
   technologies: string[];
